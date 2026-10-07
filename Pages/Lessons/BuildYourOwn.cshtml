@@ -1,0 +1,78 @@
+@page
+
+<p>
+    Now you know the three parts of a website: HTML for the content, CSS for the style, and C#
+    with Razor for the logic. In this lesson you will add an <strong>About Me</strong> page to
+    this website.
+</p>
+
+<h2>Step 1: Make the file</h2>
+<p>Open a new terminal in VS Code and run:</p>
+<pre>
+type nul &gt; Pages\AboutMe.cshtml
+code Pages\AboutMe.cshtml
+</pre>
+<p>Because the file is called <code>AboutMe.cshtml</code>, its address will be <code>/AboutMe</code>.</p>
+
+<h2>Step 2: Write the page</h2>
+<p>Paste this in and change the name, color, and hobbies to your own:</p>
+<pre>
+@@page
+@@{
+    ViewData["Title"] = "About Me";
+
+    var name = "Your Name";
+    var favoriteColor = "blue";
+    var hobbies = new[] { "Soccer", "Drawing", "Video games" };
+}
+
+&lt;div class="about-me"&gt;
+    &lt;h1&gt;Hi, I'm @@name!&lt;/h1&gt;
+    &lt;p&gt;My favorite color is @@favoriteColor.&lt;/p&gt;
+
+    &lt;h2&gt;Things I like&lt;/h2&gt;
+    &lt;ul&gt;
+        @@foreach (var hobby in hobbies)
+        {
+            &lt;li&gt;@@hobby&lt;/li&gt;
+        }
+    &lt;/ul&gt;
+
+    &lt;p&gt;I have @@hobbies.Length hobbies.&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+<ul>
+    <li><code>@@page</code> makes the file a page you can visit.</li>
+    <li>The <code>@@{ }</code> block makes three variables.</li>
+    <li><code>@@foreach</code> makes a list item for each hobby.</li>
+    <li><code>@@hobbies.Length</code> counts the hobbies.</li>
+</ul>
+
+<h2>Step 3: Visit your page</h2>
+<p>Save the file and go to <code>http://localhost:5014/AboutMe</code>.</p>
+
+<h2>Step 4: Add some style</h2>
+<p>Add this to the bottom of <code>wwwroot/css/site.css</code>:</p>
+<pre>
+.about-me {
+  border: 3px solid blue;
+  padding: 20px;
+}
+</pre>
+
+<h2>Step 5: Add it to the menu</h2>
+<p>
+    In <code>Pages/Shared/_Layout.cshtml</code>, add this line just before
+    <code>&lt;/nav&gt;</code>:
+</p>
+<pre>&lt;a href="/AboutMe"&gt;About Me&lt;/a&gt;</pre>
+
+<h2>What to learn next</h2>
+<ul>
+    <li><strong>Forms</strong> - let people type things into your page</li>
+    <li><strong>Databases</strong> - save information so your site remembers it</li>
+    <li><strong>JavaScript</strong> - code that runs in the browser</li>
+    <li><strong>Publishing</strong> - put your site on the internet</li>
+</ul>
+
+<p class="note"><strong>Great job!</strong> You built a website with HTML, CSS, C#, and Razor.</p>

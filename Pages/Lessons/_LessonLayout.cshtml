@@ -1,0 +1,37 @@
+@{
+    Layout = "_Layout";
+
+    var pagePath = ViewContext.RouteData.Values["page"]?.ToString();
+    var lesson = LessonData.All.First(l => l.Page == pagePath);
+    var previous = LessonData.All.FirstOrDefault(l => l.Number == lesson.Number - 1);
+    var next = LessonData.All.FirstOrDefault(l => l.Number == lesson.Number + 1);
+
+    ViewData["Title"] = lesson.Title;
+}
+
+<p class="lesson-number">Lesson @lesson.Number of @LessonData.All.Count</p>
+<h1>@lesson.Title</h1>
+
+@RenderBody()
+
+<hr />
+
+<p class="lesson-links">
+    @if (previous != null)
+    {
+        <a href="@previous.Page">&lt; Back: @previous.Title</a>
+    }
+    else
+    {
+        <a href="/">&lt; Home</a>
+    }
+
+    @if (next != null)
+    {
+        <a href="@next.Page">Next: @next.Title &gt;</a>
+    }
+    else
+    {
+        <a href="/">Finish</a>
+    }
+</p>

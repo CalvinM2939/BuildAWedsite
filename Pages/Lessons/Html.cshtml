@@ -1,0 +1,72 @@
+@page
+
+<p>
+    <strong>HTML</strong> stands for HyperText Markup Language. You write your words and wrap them
+    in <strong>tags</strong> that tell the browser what each part is, like a heading, a paragraph,
+    or a link.
+</p>
+
+<h2>Parts of a tag</h2>
+<pre>&lt;p class="intro"&gt;Hello, world!&lt;/p&gt;</pre>
+<ul>
+    <li><code>&lt;p&gt;</code> is the <strong>opening tag</strong>. The p means paragraph.</li>
+    <li><code>class="intro"</code> is an <strong>attribute</strong>. It adds extra information.</li>
+    <li><code>Hello, world!</code> is the <strong>content</strong> that people see.</li>
+    <li><code>&lt;/p&gt;</code> is the <strong>closing tag</strong>. The slash means "end here."</li>
+</ul>
+
+<h2>Common tags</h2>
+<table>
+    <tr><th>Tag</th><th>What it makes</th></tr>
+    <tr><td><code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code></td><td>Headings, from biggest to smallest</td></tr>
+    <tr><td><code>&lt;p&gt;</code></td><td>A paragraph</td></tr>
+    <tr><td><code>&lt;a href="..."&gt;</code></td><td>A link</td></tr>
+    <tr><td><code>&lt;img src="..." alt="..."&gt;</code></td><td>A picture</td></tr>
+    <tr><td><code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code></td><td>A bulleted list</td></tr>
+    <tr><td><code>&lt;ol&gt;</code> and <code>&lt;li&gt;</code></td><td>A numbered list</td></tr>
+    <tr><td><code>&lt;strong&gt;</code></td><td>Bold text</td></tr>
+    <tr><td><code>&lt;div&gt;</code></td><td>A box that groups things together</td></tr>
+</table>
+
+<h2>Tags inside tags</h2>
+<p>
+    Tags can go inside other tags. This is called <strong>nesting</strong>. Always close the
+    inner tag before the outer tag.
+</p>
+<pre>
+&lt;!-- Right --&gt;
+&lt;p&gt;I am &lt;strong&gt;very&lt;/strong&gt; excited!&lt;/p&gt;
+
+&lt;!-- Wrong --&gt;
+&lt;p&gt;I am &lt;strong&gt;very excited!&lt;/p&gt;&lt;/strong&gt;
+</pre>
+<p>Lines that start with <code>&lt;!--</code> are <strong>comments</strong>. The browser ignores them.</p>
+
+<h2>A whole page</h2>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My First Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello, world!&lt;/h1&gt;
+    &lt;p&gt;This is my first web page.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<ul>
+    <li>The <code>&lt;head&gt;</code> has information about the page, like the title on the browser tab.</li>
+    <li>The <code>&lt;body&gt;</code> has everything you see on the page.</li>
+</ul>
+
+<p class="note">
+    <strong>Why do I see &amp;lt; in the code?</strong> The browser thinks <code>&lt;</code> starts
+    a real tag. To show it as text, HTML uses <code>&amp;lt;</code> for &lt; and
+    <code>&amp;gt;</code> for &gt;.
+</p>
+
+<p class="note">
+    <strong>Try it:</strong> Open <code>Pages/Lessons/Html.cshtml</code>, add
+    <code>&lt;p&gt;I wrote this!&lt;/p&gt;</code> at the bottom, and save. The page updates by itself.
+</p>

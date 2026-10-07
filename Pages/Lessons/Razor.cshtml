@@ -1,0 +1,98 @@
+@page
+@{
+    var hour = DateTime.Now.Hour;
+}
+
+<p>
+    HTML and CSS make a page that looks the same for everyone. To make a page that can count,
+    make choices, or change, you need a programming language. This website uses <strong>C#</strong>.
+</p>
+<p>
+    The C# runs on the <strong>server</strong>. It builds the HTML, and then the server sends that
+    HTML to the browser. The browser never sees your C# code.
+</p>
+
+<h2>What is Razor?</h2>
+<p>
+    <strong>Razor</strong> lets you mix C# and HTML in the same file. Razor files end in
+    <code>.cshtml</code>. The most important rule is:
+</p>
+<p class="note"><strong>The @@ symbol switches from HTML to C#.</strong></p>
+
+<h2>Showing a value</h2>
+<pre>
+@@{
+    var name = "Sam";
+}
+&lt;p&gt;Hi, @@name!&lt;/p&gt;
+</pre>
+<p>
+    The <code>@@{ }</code> block holds C# code. <code>@@name</code> puts the value of the variable
+    into the page. The browser gets <code>&lt;p&gt;Hi, Sam!&lt;/p&gt;</code>.
+</p>
+<p>
+    This page is doing it right now: the server's clock says <strong>@DateTime.Now.ToString("h:mm tt")</strong>.
+    Refresh the page and the time changes.
+</p>
+
+<h2>Making choices with if</h2>
+<pre>
+@@if (hour &lt; 12)
+{
+    &lt;p&gt;Good morning!&lt;/p&gt;
+}
+else
+{
+    &lt;p&gt;Good afternoon!&lt;/p&gt;
+}
+</pre>
+<p>
+    Right now this would say:
+    @if (hour < 12)
+    {
+        <strong>Good morning!</strong>
+    }
+    else
+    {
+        <strong>Good afternoon!</strong>
+    }
+</p>
+
+<h2>Repeating with foreach</h2>
+<pre>
+@@{
+    var snacks = new[] { "Pizza", "Tacos", "Popcorn" };
+}
+&lt;ul&gt;
+    @@foreach (var snack in snacks)
+    {
+        &lt;li&gt;@@snack&lt;/li&gt;
+    }
+&lt;/ul&gt;
+</pre>
+<p>
+    This writes one <code>&lt;li&gt;</code> for each snack. The home page uses a loop like this to
+    list every lesson from <code>Models/Lesson.cs</code>.
+</p>
+
+<h2>Files and web addresses</h2>
+<p>Each file in the <code>Pages</code> folder becomes a web address:</p>
+<table>
+    <tr><th>File</th><th>Address</th></tr>
+    <tr><td><code>Pages/Index.cshtml</code></td><td><code>/</code></td></tr>
+    <tr><td><code>Pages/Lessons/Html.cshtml</code></td><td><code>/Lessons/Html</code></td></tr>
+    <tr><td><code>Pages/Lessons/Razor.cshtml</code></td><td><code>/Lessons/Razor</code></td></tr>
+</table>
+
+<h2>Layouts</h2>
+<p>
+    The menu and footer are not copied into every page. They are in one file,
+    <code>Pages/Shared/_Layout.cshtml</code>. The line <code>@@RenderBody()</code> is where each
+    page's content goes. The lessons also use <code>Pages/Lessons/_LessonLayout.cshtml</code>,
+    which adds the lesson title and the Back and Next links.
+</p>
+
+<p class="note">
+    <strong>Showing a real @@ sign:</strong> Because @@ means "C# starts here," you type it twice
+    (<code>@@@@</code>) to show one on the page.
+</p>

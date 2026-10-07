@@ -1,0 +1,53 @@
+@page
+
+<p>
+    Every time you watch a video, look up homework help, or check a game score, you are using a
+    website. A website is really just a set of files. A web browser is a program that knows how
+    to read those files and show them to you.
+</p>
+
+<h2>What happens when you visit a website</h2>
+<ol>
+    <li>You type an address, called a <strong>URL</strong>, into your browser.</li>
+    <li>Your browser sends a <strong>request</strong> over the internet asking for the page.</li>
+    <li>A <strong>server</strong> (a computer that sends out web pages) gets the request.</li>
+    <li>The server sends back a <strong>response</strong>: the files for the page.</li>
+    <li>Your browser reads the files and shows you the page.</li>
+</ol>
+
+<p class="note">
+    <strong>Think of a restaurant.</strong> You (the browser) order from the menu (the URL).
+    The kitchen (the server) makes your food (the page), and the waiter brings it to you
+    (the response).
+</p>
+
+<h2>The three languages</h2>
+<p>Most websites are built with three kinds of code:</p>
+<table>
+    <tr><th>Language</th><th>What it does</th></tr>
+    <tr><td>HTML</td><td>Says what is on the page</td></tr>
+    <tr><td>CSS</td><td>Says how the page looks</td></tr>
+    <tr><td>C#</td><td>Makes decisions and builds the page on the server</td></tr>
+</table>
+
+<h2>Static and dynamic pages</h2>
+<p>
+    A <strong>static</strong> page is the same for everyone, like a poster. A <strong>dynamic</strong>
+    page is built fresh every time someone visits, like a scoreboard.
+</p>
+<p>
+    This website is dynamic. The home page lists @LessonData.All.Count lessons, but nobody typed
+    that list into the page. C# built it from a list of lessons right before sending the page to you.
+</p>
+
+<h2>Where does this website live?</h2>
+<p>
+    Right now the server is your own computer. That is what <code>localhost</code> in the address
+    bar means. When you ran <code>dotnet watch</code>, you started a small web server. Real websites
+    work the same way, but their servers are in big buildings called data centers.
+</p>
+
+<p class="note">
+    <strong>Try it:</strong> Right-click this page and choose <strong>View page source</strong>.
+    That is the HTML the server sent to your browser.
+</p>
