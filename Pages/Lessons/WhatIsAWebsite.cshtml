@@ -1,53 +1,44 @@
 @page
 
 <p>
-    Every time you watch a video, look up homework help, or check a game score, you are using a
-    website. A website is really just a set of files. A web browser is a program that knows how
-    to read those files and show them to you.
+    Every time that you look up a video, look up an article, or check a map, you use a
+    website. A website is a set of files. A web browser is a program that
+    reads those files and show them to you.
 </p>
 
-<h2>What happens when you visit a website</h2>
+<h2>What happens when you search up a website</h2>
 <ol>
-    <li>You type an address, called a <strong>URL</strong>, into your browser.</li>
-    <li>Your browser sends a <strong>request</strong> over the internet asking for the page.</li>
-    <li>A <strong>server</strong> (a computer that sends out web pages) gets the request.</li>
-    <li>The server sends back a <strong>response</strong>: the files for the page.</li>
-    <li>Your browser reads the files and shows you the page.</li>
+    <li>You type a <strong>URL</strong>, into your browser.</li>
+    <li>Your browser sends a request to a server over the internet for the page.</li>
+    <li>A server which is a computer that holds data sends files back to your browser</li>
+    <li>Your browser then uses the files and shows the page on your screen.</li>
 </ol>
 
 <p class="note">
-    <strong>Think of a restaurant.</strong> You (the browser) order from the menu (the URL).
-    The kitchen (the server) makes your food (the page), and the waiter brings it to you
-    (the response).
+    <strong>So,</strong>after typing the url into your browser it sends a request
+    and a server sends files to run the website.
 </p>
 
-<h2>The three languages</h2>
-<p>Most websites are built with three kinds of code:</p>
+<h2>This website is built with three kinds of code:</h2>
+
 <table>
-    <tr><th>Language</th><th>What it does</th></tr>
-    <tr><td>HTML</td><td>Says what is on the page</td></tr>
-    <tr><td>CSS</td><td>Says how the page looks</td></tr>
-    <tr><td>C#</td><td>Makes decisions and builds the page on the server</td></tr>
+    <tr><td>HTML</td><td>Controls what is on the page</td></tr>
+    <tr><td>CSS</td><td>Controls how the page looks</td></tr>
+    <tr><td>C#</td><td>Builds the page on the server</td></tr>
 </table>
 
 <h2>Static and dynamic pages</h2>
 <p>
-    A <strong>static</strong> page is the same for everyone, like a poster. A <strong>dynamic</strong>
-    page is built fresh every time someone visits, like a scoreboard.
+    A static page is the same for every time, A dynamic
+    page is changed every time someone visits, like a scoreboard or the time.
 </p>
 <p>
-    This website is dynamic. The home page lists @LessonData.All.Count lessons, but nobody typed
-    that list into the page. C# built it from a list of lessons right before sending the page to you.
+    This website is dynamic. The home page lists @LessonData.All.Count parts, but that number was not typed into the page.
+     C# the programming language makes it from a list of parts in the code.
 </p>
 
-<h2>Where does this website live?</h2>
+<h2>Where is a website stored?</h2>
 <p>
-    Right now the server is your own computer. That is what <code>localhost</code> in the address
-    bar means. When you ran <code>dotnet watch</code>, you started a small web server. Real websites
-    work the same way, but their servers are in big buildings called data centers.
-</p>
-
-<p class="note">
-    <strong>Try it:</strong> Right-click this page and choose <strong>View page source</strong>.
-    That is the HTML the server sent to your browser.
+    Websites are usually stored in servers in data centers. However unpublished ones like this are stored on this computer instead of a
+    data center.
 </p>

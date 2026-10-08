@@ -1,11 +1,11 @@
 @page
 
 <p>
-    HTML says what is on the page. <strong>CSS</strong> (Cascading Style Sheets) says how it looks:
-    colors, fonts, sizes, and spacing.
+    HTML is what is on the page. <strong>CSS</strong> (Cascading Style Sheets) is how it looks:
+    colors, fonts, sizes, and spacing, etc.
 </p>
 
-<h2>Parts of a CSS rule</h2>
+<h2>Parts of CSS</h2>
 <pre>
 h1 {
   color: blue;
@@ -13,10 +13,10 @@ h1 {
 }
 </pre>
 <ul>
-    <li><code>h1</code> is the <strong>selector</strong>. It picks which tags to style.</li>
-    <li><code>color</code> and <code>font-size</code> are <strong>properties</strong>.</li>
-    <li><code>blue</code> and <code>40px</code> are <strong>values</strong>.</li>
-    <li>Each line ends with a semicolon, just like in C#.</li>
+    <li><code>h1</code> is the <strong>selector</strong>. It selects which of the tags to edit.</li>
+    <li><code>color</code> and <code>font-size</code> are <strong>properties which change how the tags look</strong>.</li>
+    <li><code>blue</code> and <code>40px</code> are <strong>values which determine how much it should change the tags</strong>.</li>
+    <li>And every line ends with a semicolon like in C#.</li>
 </ul>
 
 <h2>Selectors</h2>
@@ -37,34 +37,28 @@ a:hover {
 }
 </pre>
 <p>
-    A selector with a dot, like <code>.note</code>, is a <strong>class selector</strong>. You add
-    <code>class="note"</code> to a tag in your HTML and style it in your CSS. The yellow boxes in
-    these lessons use the <code>note</code> class.
+    A selector with a dot in front of it like <code>.note</code>, is a <strong>class selector</strong>. You add
+    <code>class="note"</code> to an HTML tag and edit how it looks with CSS. For example, the yellow boxes in
+    this website use the <code>note</code> class.
 </p>
 
-<h2>Colors</h2>
+<h2>Adding Colors</h2>
 <ul>
-    <li>Color names, like <code>red</code> or <code>blue</code></li>
-    <li>Hex codes, like <code>#2c5aa0</code>. The pairs are how much red, green, and blue to mix.</li>
+    <li>You can add color names, like <code>red</code> or <code>blue</code></li>
+    <li>Also you can use hex codes, like <code>#2c5aa0</code>. which say how much red, green, and blue are inside the color you want.</li>
 </ul>
 
-<h2>The box model</h2>
-<p>The browser treats every tag as a box with four layers:</p>
+<h2>A box model</h2>
+<p>Your browser treats the site like a box with four layers:</p>
 <ol>
-    <li><strong>Content</strong> - the text or picture</li>
-    <li><strong>Padding</strong> - space inside the border</li>
-    <li><strong>Border</strong> - a line around the box</li>
-    <li><strong>Margin</strong> - space outside the border</li>
+    <li><strong>Content</strong> - the things inside like the words or pictures</li>
+    <li><strong>Padding</strong> - empty space inside of the border between the content and the border</li>
+    <li><strong>Border</strong> - a line showing the edge of the page</li>
+    <li><strong>Margin</strong> - space outside the border of the page</li>
 </ol>
 
-<h2>Where the CSS is in this project</h2>
+<h2>Where CSS is used in this website</h2>
 <p>
-    All the styles for this website are in <code>wwwroot/css/site.css</code>. The layout file
-    links to it, so every page gets the same look.
+    All the colors and shapes and fonts in this website use CSS. Like the yellow boxes surrouding some sentences or the headings.
 </p>
 
-<p class="note">
-    <strong>Try it:</strong> Open <code>wwwroot/css/site.css</code> and change
-    <code>#2c5aa0</code> to <code>green</code> in the <code>header</code> rule. Save and watch the
-    header change color.
-</p>

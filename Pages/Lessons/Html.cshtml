@@ -1,72 +1,69 @@
 @page
 
 <p>
-    <strong>HTML</strong> stands for HyperText Markup Language. You write your words and wrap them
-    in <strong>tags</strong> that tell the browser what each part is, like a heading, a paragraph,
-    or a link.
+    <strong>HTML</strong> stands for HyperText Markup Language. You write words and put them
+    in something called a <strong>tag</strong> that tell the browser what each part of the website is like a heading, paragraph, etc.
 </p>
 
 <h2>Parts of a tag</h2>
-<pre>&lt;p class="intro"&gt;Hello, world!&lt;/p&gt;</pre>
+<pre>&lt;p class="intro"&gt;Hello&lt;/p&gt;</pre>
 <ul>
-    <li><code>&lt;p&gt;</code> is the <strong>opening tag</strong>. The p means paragraph.</li>
-    <li><code>class="intro"</code> is an <strong>attribute</strong>. It adds extra information.</li>
-    <li><code>Hello, world!</code> is the <strong>content</strong> that people see.</li>
-    <li><code>&lt;/p&gt;</code> is the <strong>closing tag</strong>. The slash means "end here."</li>
+    <li><code>&lt;p&gt;</code> is an <strong>opening tag</strong>.It tells the browser where content begins. The p stands for paragraph.</li>
+    <li><code>class="intro"</code> is an <strong>attribute</strong>. What it does is add more information to the current tag and adjusts its behaviour.</li>
+    <li><code>Hello, world!</code> is the <strong>words or images</strong> that you see on the page.</li>
+    <li><code>&lt;/p&gt;</code> is the <strong>closing tag</strong>.Which tells the browser where to end the content. The slash means to end here.</li>
 </ul>
 
-<h2>Common tags</h2>
+<h2>Most used tags</h2>
 <table>
     <tr><th>Tag</th><th>What it makes</th></tr>
-    <tr><td><code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code></td><td>Headings, from biggest to smallest</td></tr>
-    <tr><td><code>&lt;p&gt;</code></td><td>A paragraph</td></tr>
-    <tr><td><code>&lt;a href="..."&gt;</code></td><td>A link</td></tr>
-    <tr><td><code>&lt;img src="..." alt="..."&gt;</code></td><td>A picture</td></tr>
-    <tr><td><code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code></td><td>A bulleted list</td></tr>
-    <tr><td><code>&lt;ol&gt;</code> and <code>&lt;li&gt;</code></td><td>A numbered list</td></tr>
-    <tr><td><code>&lt;strong&gt;</code></td><td>Bold text</td></tr>
-    <tr><td><code>&lt;div&gt;</code></td><td>A box that groups things together</td></tr>
+    <tr><td><code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code></td><td>Headings, from largest to smallest</td></tr>
+    <tr><td><code>&lt;p&gt;</code></td><td>paragraphs</td></tr>
+    <tr><td><code>&lt;a href="..."&gt;</code></td><td>links to other pages or websites</td></tr>
+    <tr><td><code>&lt;img src="..." alt="..."&gt;</code></td><td>pictures or illustrations/images</td></tr>
+    <tr><td><code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code></td><td>makes bullet points</td></tr>
+    <tr><td><code>&lt;ol&gt;</code> and <code>&lt;li&gt;</code></td><td>creates numbered lists</td></tr>
+    <tr><td><code>&lt;strong&gt;</code></td><td>Bolded text</td></tr>
+    <tr><td><code>&lt;div&gt;</code></td><td>A box that contains content and groups it.</td></tr>
 </table>
 
-<h2>Tags inside tags</h2>
+<h2>Tags inside of tags</h2>
 <p>
-    Tags can go inside other tags. This is called <strong>nesting</strong>. Always close the
-    inner tag before the outer tag.
+    Tags can also be inside of other tags. Which is called <strong>nesting</strong>.Also you always close the
+    innermost tag before the outermost tag.
 </p>
 <pre>
-&lt;!-- Right --&gt;
-&lt;p&gt;I am &lt;strong&gt;very&lt;/strong&gt; excited!&lt;/p&gt;
+&lt;!--correct--&gt;
+&lt;p&gt;This is called &lt;n&gt;nesting&lt;/strong&gt; &lt;/p&gt;
 
-&lt;!-- Wrong --&gt;
-&lt;p&gt;I am &lt;strong&gt;very excited!&lt;/p&gt;&lt;/strong&gt;
+&lt;!--Wrong--&gt;
+&lt;p&gt;This is called &lt;&gt;nesting&lt;/strong&gt; &lt;/p&gt;
+
 </pre>
-<p>Lines that start with <code>&lt;!--</code> are <strong>comments</strong>. The browser ignores them.</p>
+<p>Lines that begin with <code>&lt;!--</code> are called <strong>comments</strong>.
+ Which the browser ignores and does not show when it showsthe page.</p>
 
-<h2>A whole page</h2>
+<h2>A page</h2>
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
-    &lt;title&gt;My First Page&lt;/title&gt;
+    &lt;title&gt;3rd Page&lt;/title&gt;
   &lt;/head&gt;
   &lt;body&gt;
-    &lt;h1&gt;Hello, world!&lt;/h1&gt;
-    &lt;p&gt;This is my first web page.&lt;/p&gt;
+    &lt;h1&gt;Hello&lt;/h1&gt;
+    &lt;p&gt;This a web page.&lt;/p&gt;
   &lt;/body&gt;
 &lt;/html&gt;
 </pre>
 <ul>
-    <li>The <code>&lt;head&gt;</code> has information about the page, like the title on the browser tab.</li>
-    <li>The <code>&lt;body&gt;</code> has everything you see on the page.</li>
+    <li>The <code>&lt;head&gt;</code> code has the information about the page like the title. It acts as a container for data on the page.</li>
+    <li>The <code>&lt;body&gt;</code> is everything you see on the page.</li>
 </ul>
 
 <p class="note">
-    <strong>Why do I see &amp;lt; in the code?</strong> The browser thinks <code>&lt;</code> starts
-    a real tag. To show it as text, HTML uses <code>&amp;lt;</code> for &lt; and
-    <code>&amp;gt;</code> for &gt;.
-</p>
-
-<p class="note">
-    <strong>Try it:</strong> Open <code>Pages/Lessons/Html.cshtml</code>, add
-    <code>&lt;p&gt;I wrote this!&lt;/p&gt;</code> at the bottom, and save. The page updates by itself.
+    <strong>Do you know why &amp;lt; is in the code?</strong> Well the browser thinks <code>&lt;</code> starts
+    a tag instead of plain text. To show it as plain text, HTML has to use <code>&amp;lt;</code> for &lt; and
+    <code>&amp;gt;</code> for &gt; so that you don't end up making an error.
+     This looks really weird when making the code to write this because i have to write &-amp semicolon lt; and &-amp semicolon gt; to show the text to show the text version of the command to write plain text &lt; and &gt;
 </p>
