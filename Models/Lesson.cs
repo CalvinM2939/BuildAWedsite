@@ -10,6 +10,5 @@ public static class LessonData
         new(2, "HTML", "The things that tell a browser what is on a page.", "/Lessons/Html"),
         new(3, "CSS", "How to add colors, fonts, and spacing.", "/Lessons/Css"),
         new(4, "C# and Razor", "How to make pages that can count and make choices.", "/Lessons/Razor"),
-        new(5, "Build Your Own Page", "Put it together and make a new page.", "/Lessons/BuildYourOwn"),
     ];
 }
